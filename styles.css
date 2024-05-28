@@ -1,0 +1,271 @@
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+}
+
+
+
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+   font-size: 20px;
+   font-weight: lighter;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    background-color: #03182e;
+    align-items: center;
+    justify-content: center;
+}
+
+hr {
+    border: 1px grey solid;
+    width : 100px
+}
+
+.logo {
+    display: flex;
+    margin-left: 15px;
+    margin-right: 30px;
+    width: 10%;
+
+}
+
+.left-menu {
+    display: flex;
+    padding-left: 0px;
+}
+
+.left-menu ul {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0px;
+    margin-left: 0;
+}
+
+.left-menu li {
+    flex-direction: row;
+    margin-right: 30px;
+    color: white;
+}
+
+.left-menu i {
+    margin-right: 7px;
+}
+
+.left-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.right-menu{
+    display: flex;
+    margin-left: auto;
+}
+
+.right-menu ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+
+}
+
+.right-menu li {
+    flex-direction: row;
+    margin-right: 20px;
+    color: white;
+}
+
+.right-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.subscribe {
+    padding: 3px 10px;
+    background-color: red;
+    border-radius: 5px;
+    border: 1px black solid ;
+}
+
+.fa-chevron-down {
+    margin-left: 5px;
+    font-size: 9px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px #ebebeb solid;
+    margin-left: 15px;
+    background-color: #fafafa;
+}
+
+.breadcrumb {
+    display: flex;
+}
+
+.breadcrumb ul {
+    display: flex;
+    list-style: none;
+}
+
+.breadcrumb li {
+    flex-direction: row;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    margin: 20px;
+    content: ">";
+  }
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #135392;
+}
+
+.biography {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    background-color: white;
+    border: 1px #ebebeb solid;
+    padding: 20px 0 20px 20px;
+    width: 800px;
+}
+
+.biography-header {
+    width: fit-content;
+}
+
+.action-buttons {
+    display: flex;
+    padding-left: 0;
+}
+
+.action-buttons ul {
+    display: flex;
+    list-style: none;
+}
+
+.action-buttons li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border: 1px rgb(243, 236, 236) solid;
+    border-radius: 10px;
+    margin-right: 10px;
+    color: #135392;
+}
+
+.action-buttons a {
+    text-decoration: none;
+    color: #135392;
+}
+
+.action-buttons i {
+    padding-right: 5px;
+}
+
+.author-infos {
+    display: flex;
+}
+
+.author-infos ul {
+    display: flex;
+    
+}
+.author-infos li {
+    flex-direction: row;
+}
+
+.author-infos a {
+    text-decoration: none;
+}
+
+.alternate-title{
+    color: #666666;
+    font-size: 12px;
+    font-style: italic;
+
+}
+
+.biography-header {
+ line-height: 0.5em;
+ width: fit-content;
+}
+
+.biography-text {
+    width: 35%;
+    line-height: 1.5em
+}
+
+.biography-text a {
+    text-decoration: none;
+    
+}
+
+.autor-and-date {
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+}
+
+.autor-and-date a {
+    text-decoration: none;
+    justify-content: center;
+    align-content: center;
+}
+
+.post-date {
+    display: flex;
+    flex-direction: row;
+    padding-left: 25px;
+}
+
+.post-date li {
+    margin-right: 30px;
+    padding-left: 0;
+}
+
+#doted {
+    border-bottom: 2px dotted #14599d;   
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.biography-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.biography-text {
+    width: 52%;
+}
+
+.additional-infos {
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    border: 1px #ebebeb solid;
+}
+
+.additional-infos a {
+    text-decoration: none;
+}
+
+.additional-infos-text {
+    width: 80%;
+    font-size: 15px;
+}
