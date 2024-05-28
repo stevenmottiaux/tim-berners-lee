@@ -2,9 +2,11 @@
 
 Ce projet est une maquette responsive d'une page de biographie pour Tim Berners-Lee, conçue pour les vues desktop et mobile. La maquette comprend un en-tête avec navigation, une navigation par fil d'Ariane, une section biographie avec des boutons d'action et des informations supplémentaires dans une section aside.
 
+La version mobile s'active quand l'écran de l'utilisateur est à maximum <span style="color:red">**480px**</span> de large.
+
 ## Lien du projet 
 
-Voici le lien du projet :  [lien](https://stevenmottiaux.github.io/tim-berners-lee)
+Voici le lien du projet : [lien](https://stevenmottiaux.github.io/tim-berners-lee)
 
 ## Structure du projet
 Voici la structure de ce projet:

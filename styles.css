@@ -10,11 +10,13 @@ body {
 
 h1 {
     font-size: 2rem;
+    margin: 0;
 }
 
 h2 {
     font-size: 1.5rem;
     font-weight: lighter;
+    margin: 0;
 }
 
 header {
@@ -28,6 +30,14 @@ header {
 hr {
     border: 1px grey solid;
     width: 100px;
+}
+
+.tag-science-tech {
+   width: fit-content; 
+   background-color: #fed7aa ;
+   border: 1px #fed7aa solid;
+   border-radius: 10px;
+   display: none;
 }
 
 .logo {
@@ -104,7 +114,7 @@ hr {
 }
 
 .fa-circle-user {
-    display: none;
+    visibility: hidden;
 }
 
 main {
@@ -208,7 +218,8 @@ main {
 }
 
 .biography-header {
-    line-height: 0.5em;
+    display: flex;
+    flex-direction: column;
     width: fit-content;
 }
 
@@ -219,6 +230,7 @@ main {
 
 .biography-text a {
     text-decoration: none;
+    color: #135392;
 
 }
 
@@ -228,7 +240,18 @@ main {
     font-size: 12px;
 }
 
-.autor-and-date a {
+.autor-and-date-mobile {
+    display: none;
+    flex-direction: column;
+    font-size: 12px;
+}
+
+.autor-and-date-mobile p {
+    line-height: 1px;
+    padding: 5px 0;
+}
+
+.autor-and-date a, .autor-and-date-mobile a {
     text-decoration: none;
     justify-content: center;
     align-content: center;
@@ -245,12 +268,31 @@ main {
     padding-left: 0;
 }
 
-#doted {
+.doted {
     border-bottom: 2px dotted #14599d;
 }
 
 .bold {
     font-weight: bold;
+}
+
+.tab-content-button {
+    display: none;
+    border: 1px rgb(243, 236, 236) solid;
+    border-radius: 5px;
+    padding: 10px 50px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.tab-content-button p {
+    display: flex;
+    margin-left: 5px;
+}
+
+.tab-content-button i, .tab-content-button p {
+    color: #135392;
 }
 
 .biography-content {
@@ -296,6 +338,9 @@ main {
     margin: 5px 10px;
 }
 
+.additional-infos-text-mobile {
+    display: none;
+}
 
 .related-content-button {
     display: flex;
@@ -322,22 +367,26 @@ main {
     font-size: 7px;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 500px) {
     body {
         width: 100%;
-        margin: 0;
+        padding-top: 60px;
     }
     
     main {
-        margin: 0;
+        margin: 5px;
     }
 
     header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
-        align-items:center; 
-        width: 100%;
+        justify-content: space-between;
+        height: 60px; 
     }
 
     .logo {
@@ -368,7 +417,12 @@ main {
     .right-menu ul {
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: stretch;
+        padding-left: 20px;
+    }
+
+    .right-menu li {
+        padding: auto;
     }
 
     .left-menu a {
@@ -381,9 +435,9 @@ main {
         align-items: center;
         width: 50%;
         order: 1;
+        margin-right: 10px;
     }
-
-
+ 
     .login-display {
         display: none;
     }
@@ -393,6 +447,107 @@ main {
         order: 2;
     }
 
+    .biography {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
 
+    .biography-header {
+        width: 100%;
+    }
+
+    .action-buttons {
+        display: none;
+    }
+
+    .tag-science-tech  {
+        display: inline;
+    }
+
+    .autor-and-date {
+        display: none;
+    }
+
+    .post-date {
+        display: flex;
+        flex-direction:column;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .post-date li {
+        padding-bottom: 10px;
+    }
+
+    .autor-and-date-mobile {
+        display: inline;
+        flex-direction: column;
+        font-size: 12px;
+    }
+
+    .autor-and-date-mobile a {
+        display: inline;
+        flex-direction: column;
+        font-size: 12px;
+        color: #135392;
+    }
+
+    .tab-content-button {
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        margin-left: 75px;
+    }
+
+    .tab-content-button p {
+        width: fit-content;
+        font-weight: 900;
+    }
+    
+    .biography-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+.additional-infos {
+    width: fit-content;
+    justify-self: center;
+}
+
+
+.additional-infos-text {
+    display: none;
+}
+
+.additional-infos-text-mobile {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.additional-infos-text-mobile p {
+ line-height: 0;
+ padding: 0 10px;
+}
+
+
+.related-content-button {
+    align-self: center;
+}
+
+.biography-text {
+    width: 90%;
+    padding: 20px;
+}
+
+.biography-text a:not(.doted){
+    text-decoration: underline;
+    color: #135392;
+}
 
 }
