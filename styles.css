@@ -1,17 +1,20 @@
+html,
 body {
-    margin: 0;
+    height: 100%;
     font-family: Georgia, serif;
 }
 
-
+body {
+    margin: 0;
+}
 
 h1 {
-    font-size: 30px;
+    font-size: 2rem;
 }
 
 h2 {
-   font-size: 20px;
-   font-weight: lighter;
+    font-size: 1.5rem;
+    font-weight: lighter;
 }
 
 header {
@@ -24,7 +27,7 @@ header {
 
 hr {
     border: 1px grey solid;
-    width : 100px
+    width: 100px;
 }
 
 .logo {
@@ -48,6 +51,9 @@ hr {
 }
 
 .left-menu li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
     margin-right: 30px;
     color: white;
@@ -62,7 +68,7 @@ hr {
     text-decoration: none;
 }
 
-.right-menu{
+.right-menu {
     display: flex;
     margin-left: auto;
 }
@@ -89,12 +95,16 @@ hr {
     padding: 3px 10px;
     background-color: red;
     border-radius: 5px;
-    border: 1px black solid ;
+    border: 1px black solid;
 }
 
 .fa-chevron-down {
     margin-left: 5px;
     font-size: 9px;
+}
+
+.fa-circle-user {
+    display: none;
 }
 
 main {
@@ -103,6 +113,7 @@ main {
     border-left: 1px #ebebeb solid;
     margin-left: 15px;
     background-color: #fafafa;
+    min-height: 100vh;
 }
 
 .breadcrumb {
@@ -121,7 +132,7 @@ main {
 .breadcrumb li:not(:last-child)::after {
     margin: 20px;
     content: ">";
-  }
+}
 
 .breadcrumb a {
     text-decoration: none;
@@ -135,7 +146,7 @@ main {
     background-color: white;
     border: 1px #ebebeb solid;
     padding: 20px 0 20px 20px;
-    width: 800px;
+    width: 40%;
 }
 
 .biography-header {
@@ -178,8 +189,9 @@ main {
 
 .author-infos ul {
     display: flex;
-    
+
 }
+
 .author-infos li {
     flex-direction: row;
 }
@@ -188,7 +200,7 @@ main {
     text-decoration: none;
 }
 
-.alternate-title{
+.alternate-title {
     color: #666666;
     font-size: 12px;
     font-style: italic;
@@ -196,18 +208,18 @@ main {
 }
 
 .biography-header {
- line-height: 0.5em;
- width: fit-content;
+    line-height: 0.5em;
+    width: fit-content;
 }
 
 .biography-text {
-    width: 35%;
+    width: 100%;
     line-height: 1.5em
 }
 
 .biography-text a {
     text-decoration: none;
-    
+
 }
 
 .autor-and-date {
@@ -234,7 +246,7 @@ main {
 }
 
 #doted {
-    border-bottom: 2px dotted #14599d;   
+    border-bottom: 2px dotted #14599d;
 }
 
 .bold {
@@ -244,28 +256,143 @@ main {
 .biography-content {
     display: flex;
     justify-content: space-between;
-    gap: 5px;
 }
 
 .biography-text {
     width: 52%;
 }
 
+
 .additional-infos {
-    margin-right: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: fit-content;
+    width: 35%;
+    height: fit-content;
     border: 1px #ebebeb solid;
+    margin-right: 15px;
 }
+
+.see-all-media-button {
+    font-weight: bold;
+}
+
 
 .additional-infos a {
     text-decoration: none;
+    color: #135392;
+
 }
 
 .additional-infos-text {
-    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-size: 15px;
+}
+
+.additional-infos-text p {
+    width: fit-content;
+    margin: 5px 10px;
+}
+
+
+.related-content-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    text-decoration: none;
+    padding: 6px;
+    border: 1px rgb(243, 236, 236) solid;
+    border-radius: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+}
+
+.related-content-button a {
+    color: #135392;
+    font-weight: bold;
+
+}
+
+.fa-arrow-right {
+    margin-left: 5px;
+    font-size: 7px;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    body {
+        width: 100%;
+        margin: 0;
+    }
+    
+    main {
+        margin: 0;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items:center; 
+        width: 100%;
+    }
+
+    .logo {
+        align-self: center;
+        width: 30%;
+        height: 30%;
+        order: 2;
+        margin: 0;
+    }
+
+    .left-menu {
+        justify-content: flex-start;
+        order: 1;
+        width: 30%;
+        margin-left: 20px;
+    }
+
+    .left-menu li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .right-menu {
+        width: 40%;
+        order: 3;
+    }
+
+    .right-menu ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .left-menu a {
+        display: none;
+    }
+
+    .login {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 50%;
+        order: 1;
+    }
+
+
+    .login-display {
+        display: none;
+    }
+
+    .subscribe {
+        width: 50%;
+        order: 2;
+    }
+
+
+
 }
